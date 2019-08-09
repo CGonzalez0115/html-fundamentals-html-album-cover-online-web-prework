@@ -18,9 +18,7 @@ RSpec.describe 'HTML Album Cover' do
       it 'the back section contains the correct header sizes and text content' do
         back_cover = parsed_html.search('#back').first
 
-        expect(back_cover.children.any? {|ch| ch.name == "h1"}).to be == true, "No 'h1' tag found"
-        expect(back_cover.children.select {|ch| ch.name == "h1"}.first.children.first.text).to be == "HAPPY", "The `h1` tag should include the text 'HAPPY'"
-
+        
         expect(back_cover.children.select {|ch| ch.name == "h3"}[1].children.first.text).to include("WRITTEN BY"), "A second 'h3' tag should contain the text 'WRITTEN BY' (remaining text optional)"
 
         expect(back_cover.children.any? {|ch| ch.name == "p"}).to be == true, "No 'p' tag found"
