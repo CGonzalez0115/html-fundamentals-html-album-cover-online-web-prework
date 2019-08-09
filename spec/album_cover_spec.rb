@@ -16,7 +16,7 @@ RSpec.describe 'HTML Album Cover' do
 
 
       it 'the back section contains the correct header sizes and text content' do
-    
+
       end
 
   end
